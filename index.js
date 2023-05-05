@@ -13,6 +13,9 @@ answerButton.addEventListener("click", () => {
   toggleAnswerButton.classList.toggle("card__answer--active");
 });
 
+const form = document.querySelector('[data-js="form"]');
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  event.target.reset();
+  console.log("hello");
 });

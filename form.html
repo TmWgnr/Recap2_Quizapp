@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="form.js" defer></script>
   </head>
 
   <body>
@@ -13,31 +14,33 @@
       <h1 class="header__title">Quiz-App</h1>
     </header>
     <main>
-      <div class="form-container">
+      <div data-js="form" class="form-container">
         <form class="form">
           <label class="form__label" for="your-question">Your Question:</label>
+
           <textarea
             class="form__label-text"
-            name="personal-message"
+            name="question"
             id="your-question"
-          >
-Hallo</textarea
-          >
+            required
+          ></textarea>
 
           <label class="form__label" for="your-answer">Your Answer:</label>
           <textarea
             class="form__label-text"
-            name="personal-message"
+            name="answer"
             id="your-answer"
-          >
-Hallo</textarea
-          >
+          ></textarea>
 
           <label class="form__label" for="tag">Tag:</label>
-          <input class="form__label-tag" type="text" id="tag" />
+          <input class="form__label-tag" type="text" id="tag" name="tag" />
 
           <button class="form-button" type="submit">submit</button>
         </form>
+        <ul class="card-list" data-js="Q&A">
+          <h2 class="card__question"></h2>
+          <article class="card__tag-list-item"></article>
+        </ul>
       </div>
     </main>
 
@@ -61,7 +64,7 @@ Hallo</textarea
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="/bookmarks.html"
@@ -79,7 +82,7 @@ Hallo</textarea
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
             href="/form.html"
