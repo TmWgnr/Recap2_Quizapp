@@ -12,7 +12,3 @@ const toggleAnswerButton = document.querySelector(
 answerButton.addEventListener("click", () => {
   toggleAnswerButton.classList.toggle("card__answer--active");
 });
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-});
