@@ -6,39 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./form.js" defer></script>
   </head>
-
   <body>
     <header class="header">
       <h1 class="header__title">Quiz-App</h1>
     </header>
+
     <main>
       <div class="form-container">
-        <form class="form">
-          <label class="form__label" for="your-question">Your Question:</label>
-          <textarea
-            class="form__label-text"
-            name="personal-message"
-            id="your-question"
-          >
-Hallo</textarea
-          >
-
-          <label class="form__label" for="your-answer">Your Answer:</label>
-          <textarea
-            class="form__label-text"
-            name="personal-message"
-            id="your-answer"
-          >
-Hallo</textarea
-          >
-
-          <label class="form__label" for="tag">Tag:</label>
-          <input class="form__label-tag" type="text" id="tag" />
-
-          <button class="form-button" type="submit">submit</button>
+        <form class="form" data-js="form">
+            <label for="your-question">Your Question:</label>
+            <textarea
+                id="your-question"
+                name="textarea-question"
+                rows="5"
+                cols="33"
+          ></textarea>
+          <label for="your-answer">Your Answer:</label>
+          <textarea name="textarea-answer" id="your-answer" cols="33" rows="5"/></textarea>
+          <label for="tag">Tag:</label>
+          <input type="text" name="tag-input" id="tag">
+          <button type="submit">Submit</button>
         </form>
       </div>
+      <ul class="newClassList" data-js="new-questions-list">
+      </ul>
     </main>
 
     <nav class="navigation">
@@ -61,7 +54,7 @@ Hallo</textarea
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="/bookmarks.html"
@@ -79,7 +72,7 @@ Hallo</textarea
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
             href="/form.html"
@@ -91,7 +84,9 @@ Hallo</textarea
               viewbox="0 0 24 24"
               width="24px"
             >
-              <path d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+              <path
+                d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"
+              />
             </svg>
           </a>
         </li>
