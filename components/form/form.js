@@ -3,8 +3,6 @@ const newCardList = document.querySelector('[data-js="new-questions-list"]');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("hello world");
-
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   const question = data["textarea-question"];
@@ -65,4 +63,21 @@ form.addEventListener("submit", (event) => {
   newCardListBookmarkButton.append(newCardListPath);
   newCard.append(newCardTagList);
   newCardTagList.append(newCardTagListItem);
+});
+
+// Characterscount
+const containerElement = document.querySelector(
+  '[data-js="container-element"]'
+);
+const amountLeft = document.querySelector('[data-js="amountLeft"]');
+const maxLength = containerElement.getAttribute("maxlength");
+
+const updateAmountLeft = (value) => {
+  amountLeft.innerText = value;
+};
+
+updateAmountLeft(maxLength);
+
+containerElement.addEventListener("input", () => {
+  updateAmountLeft(maxLength - containerElement.value.length);
 });

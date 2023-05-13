@@ -18,3 +18,8 @@
 .newClassList {
   margin-bottom: 100px;
 }
+
+.form__characters-count {
+  font-family: "Courier New", Courier, monospace;
+  text-align: right;
+}
